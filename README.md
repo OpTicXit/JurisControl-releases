@@ -172,7 +172,7 @@ publicar.mjs         Compila y publica una nueva versión en GitHub Releases
 assets/              Ícono de la aplicación
 installer.nsi, build-seticon.mjs  Solo para compilar desde Linux
 ```
-Las reglas de trabajo del proyecto (seguridad, modelo de datos, migraciones, reglas del negocio) están en [CLAUDE.md](CLAUDE.md).
+Las reglas de trabajo del proyecto (seguridad, modelo de datos, migraciones, reglas del negocio) están en el archivo `CLAUDE.md` del repositorio de código.
 
 ### Cómo publicar una nueva versión
 Los programas instalados se actualizan desde el repositorio público **[OpTicXit/JurisControl-releases](https://github.com/OpTicXit/JurisControl-releases/releases)**. El código fuente sigue privado.
