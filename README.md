@@ -128,6 +128,7 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 **Interfaz**
 - **Guía del programa:** la primera vez que entra, un recorrido paso a paso le muestra cada parte de Expedix. Puede verla de nuevo cuando quiera con el botón **?** de la barra superior o en **Configuración → Acerca de → Ver guía del programa**. Se maneja con las flechas del teclado y se cierra con Esc.
 - **Tema claro u oscuro:** botón sol/luna en la barra superior (o en Configuración). El cambio se anima con un círculo que se expande desde el botón. Si Windows tiene desactivadas las animaciones, el cambio es inmediato.
+- **Novedades después de cada actualización:** la primera vez que abre el programa tras actualizarse, una ventana le muestra lo nuevo y las correcciones de esa versión. El historial completo está en **Configuración → Acerca de → Ver novedades**.
 - **Ventana estilo macOS:** botones de cerrar, minimizar y maximizar de colores a la izquierda, título centrado con la pantalla actual, y doble clic en la barra para maximizar.
 
 **Herramientas**
@@ -202,15 +203,15 @@ No. Expedix no envía expedientes ni documentos a ningún lado. Solo consulta Gi
 ### Requisitos
 - Windows 10 u 11
 - [Node.js](https://nodejs.org) 18 o superior (incluye npm)
-- [Git](https://git-scm.com), con acceso al repositorio privado `OpTicXit/JurisControl`
+- [Git](https://git-scm.com), con acceso al repositorio privado `OpTicXit/Expedix`
 
 ### Tecnología
 Electron 33 y electron-builder 25, con **JavaScript sin frameworks** y sin bundler. No usa módulos nativos: los datos se guardan en JSON. Las actualizaciones usan [electron-updater](https://www.electron.build/auto-update) con GitHub Releases.
 
 ### Primeros pasos
 ```powershell
-git clone https://github.com/OpTicXit/JurisControl.git
-cd JurisControl
+git clone https://github.com/OpTicXit/Expedix.git
+cd Expedix
 npm install
 npm start
 ```
@@ -232,6 +233,7 @@ preload.js           Puente seguro window.api entre la interfaz y el proceso pri
 renderer/index.html  Esqueleto de la ventana y barra lateral
 renderer/styles.css  Estilos (tema claro y oscuro)
 renderer/calendario.js  Festivos de Colombia, días hábiles y vacancia judicial
+renderer/novedades.js   Novedades de cada versión (se muestran tras actualizar y son las notas en GitHub)
 renderer/app.js      Interfaz: catálogos, vistas, modales y acciones
 publicar.mjs         Compila y publica una nueva versión en GitHub Releases
 assets/              Logo (logo.svg), íconos (icon.png, icon.ico) y sonidos (assets/sonidos)
@@ -253,16 +255,17 @@ Los programas instalados se actualizan desde el repositorio público **[OpTicXit
    npm version patch
    ```
    (o `npm version minor` / `npm version major`). El comando también crea el commit y la etiqueta de la versión.
-3. Publique:
+3. **Escriba las novedades** de esa versión al principio de `renderer/novedades.js`: qué hay de nuevo (`nuevo`) y qué se corrigió (`correcciones`), en lenguaje claro para los abogados. Cada usuario las verá en una ventana la primera vez que abra el programa después de actualizar. `npm run publicar` no publica si faltan.
+4. Publique:
    ```powershell
    npm run publicar
    ```
-   El script usa la sesión de GitHub que Git ya tiene guardada en Windows. Otra opción es definir la variable `GH_TOKEN` con un token que tenga permiso sobre `JurisControl-releases`.
-4. Suba el código y la etiqueta al repositorio privado:
+   El script usa la sesión de GitHub que Git ya tiene guardada en Windows. Otra opción es definir la variable `GH_TOKEN` con un token que tenga permiso sobre `JurisControl-releases`. Al terminar, escribe esas mismas novedades como notas de la versión en GitHub.
+5. Suba el código y la etiqueta al repositorio privado:
    ```powershell
    git push --follow-tags
    ```
-5. En pocas horas, o enseguida si el usuario pulsa **Buscar actualizaciones**, todos los equipos con Expedix instalado reciben la versión nueva.
+6. En pocas horas, o enseguida si el usuario pulsa **Buscar actualizaciones**, todos los equipos con Expedix instalado reciben la versión nueva, y al reiniciar el programa ven sus novedades.
 
 > Si cambia la estructura de `datos.json`, suba `version` dentro de los datos y agregue una migración en `loadData()` (ver CLAUDE.md). Los usuarios conservan su información al actualizar, así que **nunca rompa datos existentes**.
 
