@@ -1,10 +1,12 @@
-<p align="center"><img src="assets/icon.png" width="96" alt="JurisControl"></p>
+<p align="center"><img src="assets/icon.png" width="96" alt="Expedix"></p>
 
-# JurisControl
+# Expedix
 
 Aplicación de escritorio para **Windows** dirigida a abogados colombianos. Con ella puede llevar el control de sus expedientes, las etapas de cada proceso con su fecha de inicio y su fecha final, los documentos anexos y los **vencimientos de términos**. Le avisa con **notificaciones de Windows** antes de que un término venza.
 
 Funciona **sin internet** y guarda la información solo en su computador. Solo necesita conexión para buscar actualizaciones.
+
+> **Antes se llamaba JurisControl.** Si ya lo tenía instalado, se actualiza solo a Expedix y conserva sus cuentas, expedientes y documentos.
 
 ---
 
@@ -25,7 +27,7 @@ Funciona **sin internet** y guarda la información solo en su computador. Solo n
 **Requisitos:** Windows 10 u 11 de 64 bits. No requiere permisos de administrador.
 
 1. Entre a la página de descargas: **https://github.com/OpTicXit/JurisControl-releases/releases/latest**
-2. En la sección **Assets**, descargue el archivo `JurisControl-Instalador-X.Y.Z.exe` (X.Y.Z es el número de versión).
+2. En la sección **Assets**, descargue el archivo `Expedix-Instalador-X.Y.Z.exe` (X.Y.Z es el número de versión).
 3. Abra el archivo descargado y siga los pasos del instalador. Puede elegir la carpeta de instalación.
 4. Si Windows SmartScreen muestra el aviso *"Windows protegió su PC"*, haga clic en **Más información → Ejecutar de todas formas**. El aviso aparece porque el instalador no tiene una firma digital comercial; no indica un problema con el programa.
 5. Al terminar se crean accesos directos en el **Escritorio** y en el **menú Inicio**.
@@ -34,19 +36,19 @@ Funciona **sin internet** y guarda la información solo en su computador. Solo n
 
 ## 2. Actualizaciones
 
-JurisControl se mantiene al día solo:
+Expedix se mantiene al día solo:
 
 - **Al iniciar** y luego **cada 6 horas**, busca si hay una versión nueva.
 - Si la encuentra, la **descarga en segundo plano** y comprueba que el archivo esté completo y sin alteraciones.
 - Cuando la descarga termina, aparece una notificación de Windows y el botón de la barra lateral cambia a **"Instalar versión X.Y.Z"**.
-- Al pulsarlo, el programa se cierra, instala la nueva versión y vuelve a abrirse. Si prefiere no reiniciar en ese momento, la actualización se instala la próxima vez que cierre JurisControl por completo.
+- Al pulsarlo, el programa se cierra, instala la nueva versión y vuelve a abrirse. Si prefiere no reiniciar en ese momento, la actualización se instala la próxima vez que cierre Expedix por completo.
 
 **Buscar una actualización a mano:**
 - Botón **Buscar actualizaciones**, en la parte inferior de la barra lateral.
 - **Configuración → Actualizaciones → Buscar actualizaciones**, donde también se ve el estado (buscando, descargando, al día).
-- Clic derecho en el ícono de JurisControl junto al reloj → **Buscar actualizaciones**.
+- Clic derecho en el ícono de Expedix junto al reloj → **Buscar actualizaciones**.
 
-**Sus expedientes, documentos y configuración no se tocan al actualizar.** Se guardan aparte, en `%APPDATA%\JurisControl`. Al pasar de la versión 1.0 a una versión con cuentas, el programa le pide crear su cuenta y sus expedientes pasan a ella.
+**Sus expedientes, documentos y configuración no se tocan al actualizar.** Se guardan aparte, en `%APPDATA%\Expedix`. Al pasar de la versión 1.0 a una versión con cuentas, el programa le pide crear su cuenta y sus expedientes pasan a ella.
 
 ## 3. Funciones
 
@@ -118,13 +120,13 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 
 **Alertas y notificaciones**
 - Avisos de Windows para términos **vencidos**, que **vencen hoy** o que están **próximos a vencer** (por defecto, con 3 días de anticipación; usted puede cambiarlo).
-- **Sonidos propios** de JurisControl: uno insistente para términos vencidos o que vencen hoy, uno suave para avisos de próximos vencimientos y recordatorios, y uno alegre cuando hay una actualización lista. Puede escucharlos o desactivarlos en **Configuración**.
+- **Sonidos propios** de Expedix: uno insistente para términos vencidos o que vencen hoy, uno suave para avisos de próximos vencimientos y recordatorios, y uno alegre cuando hay una actualización lista. Puede escucharlos o desactivarlos en **Configuración**.
 - Centro de notificaciones dentro de la app, con contador de alertas sin leer.
 - Recordatorios personales con fecha y hora.
 - Sigue funcionando desde la **bandeja del sistema** (junto al reloj) aunque cierre la ventana, y puede **iniciar con Windows**.
 
 **Interfaz**
-- **Guía del programa:** la primera vez que entra, un recorrido paso a paso le muestra cada parte de JurisControl. Puede verla de nuevo cuando quiera con el botón **?** de la barra superior o en **Configuración → Acerca de → Ver guía del programa**. Se maneja con las flechas del teclado y se cierra con Esc.
+- **Guía del programa:** la primera vez que entra, un recorrido paso a paso le muestra cada parte de Expedix. Puede verla de nuevo cuando quiera con el botón **?** de la barra superior o en **Configuración → Acerca de → Ver guía del programa**. Se maneja con las flechas del teclado y se cierra con Esc.
 - **Tema claro u oscuro:** botón sol/luna en la barra superior (o en Configuración). El cambio se anima con un círculo que se expande desde el botón. Si Windows tiene desactivadas las animaciones, el cambio es inmediato.
 - **Ventana estilo macOS:** botones de cerrar, minimizar y maximizar de colores a la izquierda, título centrado con la pantalla actual, y doble clic en la barra para maximizar.
 
@@ -138,7 +140,7 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 
 ## 4. Guía rápida de uso
 
-1. **Cree su cuenta** la primera vez que abra el programa y marque sus áreas del derecho. **Guarde el código de recuperación** (en un archivo fuera del computador o impreso): es la única forma de entrar si olvida la contraseña. Si ya usaba JurisControl 1.0 en ese equipo, sus expedientes pasan a esta primera cuenta.
+1. **Cree su cuenta** la primera vez que abra el programa y marque sus áreas del derecho. **Guarde el código de recuperación** (en un archivo fuera del computador o impreso): es la única forma de entrar si olvida la contraseña. Si ya usaba Expedix 1.0 en ese equipo, sus expedientes pasan a esta primera cuenta.
 2. **Configure sus datos:** en **Configuración** escriba su nombre y tarjeta profesional, y elija con cuántos días de anticipación quiere los avisos. Pulse **Probar notificación** para confirmar que Windows muestra los avisos.
 3. **Active la copia automática diaria:** **Configuración → Respaldo → Elegir carpeta** (por ejemplo, su carpeta de OneDrive).
 4. **Cree un expediente:** **Expedientes → Nuevo expediente**. Solo el nombre del cliente es obligatorio.
@@ -155,11 +157,11 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 - Los términos en **meses o años** van **de fecha a fecha**: vencen el mismo número de día del mes correspondiente. Si ese mes no tiene ese día (por ejemplo, 31 de enero + 1 mes), vencen el último día del mes. El programa **no** corre la fecha al siguiente día hábil cuando cae en fin de semana o festivo: le avisa en la fecha más temprana posible, por prudencia.
 - Los términos en **días calendario** (por ejemplo, los de libertad en penal) cuentan todos los días.
 
-> **Importante:** los términos sugeridos son **orientativos**. Verifique siempre la norma aplicable y lo que disponga el despacho. JurisControl no reemplaza el criterio del abogado.
+> **Importante:** los términos sugeridos son **orientativos**. Verifique siempre la norma aplicable y lo que disponga el despacho. Expedix no reemplaza el criterio del abogado.
 
 ## 6. Sus datos y respaldos
 
-- Cada cuenta guarda su información en `%APPDATA%\JurisControl\cuentas\<cuenta>` (puede abrir esa carpeta desde **Configuración → Abrir carpeta de datos**):
+- Cada cuenta guarda su información en `%APPDATA%\Expedix\cuentas\<cuenta>` (puede abrir esa carpeta desde **Configuración → Abrir carpeta de datos**):
   - `datos.json`: expedientes, etapas, recordatorios y configuración, **cifrados** con su contraseña.
   - `anexos\`: copia de los documentos de cada expediente. Los documentos **no** van cifrados, para que Word, Excel o el lector de PDF puedan abrirlos.
   - `papelera\`: documentos eliminados de los últimos 30 días.
@@ -168,7 +170,7 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 - **Exportar respaldo** (Configuración) copia datos y anexos a la carpeta que elija, en el momento.
 - **Restaurar respaldo** recupera una copia exportada. Antes de reemplazar, el programa guarda una copia de seguridad de los datos actuales.
 - **Al desinstalar no se borran sus datos.** Si reinstala, todo vuelve a aparecer.
-- **Cambiar de computador:** exporte el respaldo en el equipo viejo, instale JurisControl en el nuevo y use **Restaurar respaldo**.
+- **Cambiar de computador:** exporte el respaldo en el equipo viejo, instale Expedix en el nuevo y use **Restaurar respaldo**.
 
 ## 7. Preguntas frecuentes
 
@@ -182,7 +184,7 @@ Abra **Papelera** y pulse **Restaurar**. Si pasaron más de 30 días, búsquelo 
 Cada uno crea su cuenta (en la pantalla de inicio: **Crear otra cuenta**) y desactiva **Recordar sesión en este equipo**. Al terminar, pulse **Cerrar sesión**. Las alertas suenan solo para la cuenta que tenga la sesión abierta.
 
 **No me llegan las notificaciones.**
-Revise que estén activas en **Configuración → Notificaciones de escritorio**. Revise también la configuración de Windows (**Inicio → Configuración → Sistema → Notificaciones**): JurisControl debe estar permitido y el modo **No molestar** debe estar desactivado.
+Revise que estén activas en **Configuración → Notificaciones de escritorio**. Revise también la configuración de Windows (**Inicio → Configuración → Sistema → Notificaciones**): Expedix debe estar permitido y el modo **No molestar** debe estar desactivado.
 
 **Cerré la ventana, ¿sigue avisando?**
 Sí, si está activa la opción **Seguir activo en la bandeja al cerrar**. Para salir del todo, haga clic derecho en el ícono junto al reloj → **Salir**.
@@ -191,7 +193,7 @@ Sí, si está activa la opción **Seguir activo en la bandeja al cerrar**. Para 
 Revise su conexión a internet e intente de nuevo. El resto del programa funciona igual sin conexión.
 
 **¿Mis datos se envían a algún servidor?**
-No. JurisControl no envía expedientes ni documentos a ningún lado. Solo consulta GitHub para saber si hay una versión nueva.
+No. Expedix no envía expedientes ni documentos a ningún lado. Solo consulta GitHub para saber si hay una versión nueva.
 
 ---
 
@@ -232,7 +234,8 @@ renderer/styles.css  Estilos (tema claro y oscuro)
 renderer/calendario.js  Festivos de Colombia, días hábiles y vacancia judicial
 renderer/app.js      Interfaz: catálogos, vistas, modales y acciones
 publicar.mjs         Compila y publica una nueva versión en GitHub Releases
-assets/              Ícono de la aplicación y sonidos (assets/sonidos)
+assets/              Logo (logo.svg), íconos (icon.png, icon.ico) y sonidos (assets/sonidos)
+build-afterpack.js   Al compilar, pone el logo y la versión en Expedix.exe
 installer.nsi, build-seticon.mjs  Solo para compilar desde Linux
 ```
 Las reglas de trabajo del proyecto (seguridad, modelo de datos, migraciones, reglas del negocio) están en el archivo `CLAUDE.md` del repositorio de código.
@@ -259,7 +262,7 @@ Los programas instalados se actualizan desde el repositorio público **[OpTicXit
    ```powershell
    git push --follow-tags
    ```
-5. En pocas horas, o enseguida si el usuario pulsa **Buscar actualizaciones**, todos los equipos con JurisControl instalado reciben la versión nueva.
+5. En pocas horas, o enseguida si el usuario pulsa **Buscar actualizaciones**, todos los equipos con Expedix instalado reciben la versión nueva.
 
 > Si cambia la estructura de `datos.json`, suba `version` dentro de los datos y agregue una migración en `loadData()` (ver CLAUDE.md). Los usuarios conservan su información al actualizar, así que **nunca rompa datos existentes**.
 
