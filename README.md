@@ -46,9 +46,15 @@ JurisControl se mantiene al día solo:
 - **Configuración → Actualizaciones → Buscar actualizaciones**, donde también se ve el estado (buscando, descargando, al día).
 - Clic derecho en el ícono de JurisControl junto al reloj → **Buscar actualizaciones**.
 
-**Sus expedientes, documentos y configuración no se tocan al actualizar.** Se guardan aparte, en `%APPDATA%\JurisControl`.
+**Sus expedientes, documentos y configuración no se tocan al actualizar.** Se guardan aparte, en `%APPDATA%\JurisControl`. Al pasar de la versión 1.0 a una versión con cuentas, el programa le pide crear su cuenta y sus expedientes pasan a ella.
 
 ## 3. Funciones
+
+**Cuentas por abogado**
+- Cada abogado entra con su **usuario y contraseña** y solo ve sus propios clientes, expedientes y documentos. En un mismo computador puede haber varias cuentas.
+- Los datos de cada cuenta se guardan **cifrados** con su contraseña.
+- Al crear la cuenta se entrega un **código de recuperación**. Si olvida la contraseña, ese código permite crear una nueva sin perder nada.
+- **Recordar sesión en este equipo:** el programa entra solo y las alertas funcionan desde que Windows arranca.
 
 **Expedientes**
 - Datos del cliente: nombre, tipo y número de documento, teléfono, correo, dirección y ciudad.
@@ -74,9 +80,15 @@ JurisControl se mantiene al día solo:
 - Adjunte PDF, Word, Excel, imágenes, correos y otros archivos a cada expediente y, si quiere, a una etapa.
 - Categorías: poder, documento de identidad, historia clínica, dictamen, fallo o auto, recurso, comprobante de pago, contrato de honorarios, entre otras.
 - El programa guarda **una copia** del archivo, así que puede mover o borrar el original sin perder el anexo.
+- **Buscador** (menú **Buscar** o **Ctrl + F**): encuentra clientes, expedientes y documentos escribiendo cualquier dato (nombre, cédula, radicado, entidad, nombre del archivo, descripción…), con o sin tildes. Puede filtrar solo documentos o una categoría para verlos todos organizados, del más reciente al más antiguo.
+
+**Papelera y protección contra borrados**
+- Los expedientes y documentos que elimine van a la **Papelera**, donde puede **restaurarlos durante 30 días**. Después se borran solos.
+- **Copia automática diaria** (opcional) a la carpeta que elija: una USB, OneDrive o Google Drive. Los documentos que borre siguen guardados en esa copia.
 
 **Alertas y notificaciones**
 - Avisos de Windows para términos **vencidos**, que **vencen hoy** o que están **próximos a vencer** (por defecto, con 3 días de anticipación; usted puede cambiarlo).
+- **Sonidos propios** de JurisControl: uno insistente para términos vencidos o que vencen hoy, uno suave para avisos de próximos vencimientos y recordatorios, y uno alegre cuando hay una actualización lista. Puede escucharlos o desactivarlos en **Configuración**.
 - Centro de notificaciones dentro de la app, con contador de alertas sin leer.
 - Recordatorios personales con fecha y hora.
 - Sigue funcionando desde la **bandeja del sistema** (junto al reloj) aunque cierre la ventana, y puede **iniciar con Windows**.
@@ -87,16 +99,18 @@ JurisControl se mantiene al día solo:
 - Calculadora de términos en días hábiles o calendario.
 - Reportes por estado y exportación a Excel (CSV) de expedientes y términos.
 - Tema claro y oscuro.
-- Atajos: **Ctrl + N** crea un expediente y **Ctrl + F** busca uno.
+- Atajos: **Ctrl + N** crea un expediente y **Ctrl + F** abre el buscador.
 
 ## 4. Guía rápida de uso
 
-1. **Configure sus datos:** en **Configuración** escriba su nombre y tarjeta profesional, y elija con cuántos días de anticipación quiere los avisos. Pulse **Probar notificación** para confirmar que Windows muestra los avisos.
-2. **Cree un expediente:** **Expedientes → Nuevo expediente**. Solo el nombre del cliente es obligatorio.
-3. **Agregue una etapa:** dentro del expediente, en la pestaña **Etapas**, elija el tipo. El programa propone el término legal y calcula la fecha final; usted puede cambiar ambos.
-4. **Adjunte documentos:** en la pestaña **Documentos**, elija los archivos y su categoría.
-5. **Cierre la etapa** cuando termine, con **Finalizar**. Las etapas finalizadas y los expedientes cerrados o archivados dejan de generar alertas.
-6. **Revise el Panel** cada día, o deje que las notificaciones le avisen.
+1. **Cree su cuenta** la primera vez que abra el programa. **Guarde el código de recuperación** (en un archivo fuera del computador o impreso): es la única forma de entrar si olvida la contraseña. Si ya usaba JurisControl 1.0 en ese equipo, sus expedientes pasan a esta primera cuenta.
+2. **Configure sus datos:** en **Configuración** escriba su nombre y tarjeta profesional, y elija con cuántos días de anticipación quiere los avisos. Pulse **Probar notificación** para confirmar que Windows muestra los avisos.
+3. **Active la copia automática diaria:** **Configuración → Respaldo → Elegir carpeta** (por ejemplo, su carpeta de OneDrive).
+4. **Cree un expediente:** **Expedientes → Nuevo expediente**. Solo el nombre del cliente es obligatorio.
+5. **Agregue una etapa:** dentro del expediente, en la pestaña **Etapas**, elija el tipo. El programa propone el término legal y calcula la fecha final; usted puede cambiar ambos.
+6. **Adjunte documentos:** en la pestaña **Documentos**, elija los archivos y su categoría. La categoría le ayuda a encontrarlos después en **Buscar**.
+7. **Cierre la etapa** cuando termine, con **Finalizar**. Las etapas finalizadas y los expedientes cerrados o archivados dejan de generar alertas.
+8. **Revise el Panel** cada día, o deje que las notificaciones le avisen.
 
 ## 5. Cómo se cuentan los términos
 
@@ -108,16 +122,27 @@ JurisControl se mantiene al día solo:
 
 ## 6. Sus datos y respaldos
 
-- Toda la información se guarda en `%APPDATA%\JurisControl` (puede abrir esa carpeta desde **Configuración → Abrir carpeta de datos**):
-  - `datos.json`: expedientes, etapas, recordatorios y configuración.
-  - `anexos\`: copia de los documentos de cada expediente.
-  - `respaldos\`: copia automática diaria; se conservan los últimos 15 días.
-- **Exportar respaldo** (Configuración) copia datos y anexos a la carpeta que elija, por ejemplo una USB o una carpeta de OneDrive o Google Drive. Se recomienda hacerlo con frecuencia.
+- Cada cuenta guarda su información en `%APPDATA%\JurisControl\cuentas\<cuenta>` (puede abrir esa carpeta desde **Configuración → Abrir carpeta de datos**):
+  - `datos.json`: expedientes, etapas, recordatorios y configuración, **cifrados** con su contraseña.
+  - `anexos\`: copia de los documentos de cada expediente. Los documentos **no** van cifrados, para que Word, Excel o el lector de PDF puedan abrirlos.
+  - `papelera\`: documentos eliminados de los últimos 30 días.
+  - `respaldos\`: copia automática diaria de los datos; se conservan los últimos 15 días.
+- **Copia automática diaria a una carpeta** (Configuración → Respaldo): cada día copia datos y documentos a la carpeta que elija. Esta copia y la de **Exportar respaldo** van **sin cifrar**, para poder restaurarlas en otro equipo: guárdelas en una carpeta privada.
+- **Exportar respaldo** (Configuración) copia datos y anexos a la carpeta que elija, en el momento.
 - **Restaurar respaldo** recupera una copia exportada. Antes de reemplazar, el programa guarda una copia de seguridad de los datos actuales.
 - **Al desinstalar no se borran sus datos.** Si reinstala, todo vuelve a aparecer.
 - **Cambiar de computador:** exporte el respaldo en el equipo viejo, instale JurisControl en el nuevo y use **Restaurar respaldo**.
 
 ## 7. Preguntas frecuentes
+
+**Olvidé mi contraseña.**
+En la pantalla de inicio pulse **Olvidé mi contraseña**, escriba su usuario y el código de recuperación, y elija una contraseña nueva. Sus datos se conservan y el programa le entrega un código nuevo (el anterior deja de servir). **Sin la contraseña ni el código no es posible recuperar los datos**, porque van cifrados; en ese caso solo queda restaurar una copia exportada o la copia automática.
+
+**Borré un documento o un expediente por error.**
+Abra **Papelera** y pulse **Restaurar**. Si pasaron más de 30 días, búsquelo en la carpeta de la copia automática diaria.
+
+**Varios abogados usamos el mismo computador.**
+Cada uno crea su cuenta (en la pantalla de inicio: **Crear otra cuenta**) y desactiva **Recordar sesión en este equipo**. Al terminar, pulse **Cerrar sesión**. Las alertas suenan solo para la cuenta que tenga la sesión abierta.
 
 **No me llegan las notificaciones.**
 Revise que estén activas en **Configuración → Notificaciones de escritorio**. Revise también la configuración de Windows (**Inicio → Configuración → Sistema → Notificaciones**): JurisControl debe estar permitido y el modo **No molestar** debe estar desactivado.
@@ -169,7 +194,7 @@ renderer/styles.css  Estilos (tema claro y oscuro)
 renderer/calendario.js  Festivos de Colombia, días hábiles y vacancia judicial
 renderer/app.js      Interfaz: catálogos, vistas, modales y acciones
 publicar.mjs         Compila y publica una nueva versión en GitHub Releases
-assets/              Ícono de la aplicación
+assets/              Ícono de la aplicación y sonidos (assets/sonidos)
 installer.nsi, build-seticon.mjs  Solo para compilar desde Linux
 ```
 Las reglas de trabajo del proyecto (seguridad, modelo de datos, migraciones, reglas del negocio) están en el archivo `CLAUDE.md` del repositorio de código.
