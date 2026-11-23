@@ -53,7 +53,7 @@ Expedix se mantiene al día solo:
 ## 3. Funciones
 
 **Cuentas por abogado**
-- Cada abogado entra con su **usuario y contraseña** y solo ve sus propios clientes, expedientes y documentos. En un mismo computador puede haber varias cuentas.
+- Cada abogado entra con su **usuario y contraseña**. La contraseña debe tener al menos 10 caracteres, con mayúscula, minúscula, número y símbolo, y no puede contener el usuario; el formulario muestra qué falta mientras escribe y solo ve sus propios clientes, expedientes y documentos. En un mismo computador puede haber varias cuentas.
 - Los datos de cada cuenta se guardan **cifrados** con su contraseña.
 - Al crear la cuenta se entrega un **código de recuperación**. Si olvida la contraseña, ese código permite crear una nueva sin perder nada.
 - **Recordar sesión en este equipo:** el programa entra solo y las alertas funcionan desde que Windows arranca.
@@ -111,7 +111,9 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 **Documentos y anexos**
 - Adjunte PDF, Word, Excel, imágenes, correos y otros archivos a cada expediente y, si quiere, a una etapa.
 - Categorías: poder, documento de identidad, historia clínica, dictamen, fallo o auto, recurso, comprobante de pago, contrato de honorarios, entre otras.
-- El programa guarda **una copia** del archivo, así que puede mover o borrar el original sin perder el anexo.
+- Puede adjuntar **cualquier tipo de archivo**. El programa guarda **una copia** en `Documentos\Expedix Anexos\<nombre del cliente>\`, así que puede mover o borrar el original sin perder el anexo.
+- **Apartado Archivos:** todos los documentos, organizados por cliente. Se ven dentro de Expedix (PDF, imágenes, audios, videos y textos); los demás, como Word o Excel, se abren con el programa del computador.
+- **Servicio al cliente:** el botón **Soporte por WhatsApp** (barra lateral, Configuración y pantalla de acceso) abre una conversación con el +57 302 443 2590.
 - **Buscador** (menú **Buscar** o **Ctrl + F**): encuentra clientes, expedientes y documentos escribiendo cualquier dato (nombre, cédula, radicado, entidad, nombre del archivo, descripción…), con o sin tildes. Puede filtrar solo documentos o una categoría para verlos todos organizados, del más reciente al más antiguo.
 
 **Papelera y protección contra borrados**
@@ -126,6 +128,7 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 - Sigue funcionando desde la **bandeja del sistema** (junto al reloj) aunque cierre la ventana, y puede **iniciar con Windows**.
 
 **Interfaz**
+- **Diseño de vidrio** sobre un fondo de oficina jurídica: de día en tema claro y de noche en tema oscuro.
 - **Guía del programa:** la primera vez que entra, un recorrido paso a paso le muestra cada parte de Expedix. Puede verla de nuevo cuando quiera con el botón **?** de la barra superior o en **Configuración → Acerca de → Ver guía del programa**. Se maneja con las flechas del teclado y se cierra con Esc.
 - **Tema claro u oscuro:** botón sol/luna en la barra superior (o en Configuración). El cambio se anima con un círculo que se expande desde el botón. Si Windows tiene desactivadas las animaciones, el cambio es inmediato.
 - **Novedades después de cada actualización:** la primera vez que abre el programa tras actualizarse, una ventana le muestra lo nuevo y las correcciones de esa versión. El historial completo está en **Configuración → Acerca de → Ver novedades**.
@@ -164,7 +167,7 @@ Términos sugeridos por área (orientativos; el abogado siempre puede cambiarlos
 
 - Cada cuenta guarda su información en `%APPDATA%\Expedix\cuentas\<cuenta>` (puede abrir esa carpeta desde **Configuración → Abrir carpeta de datos**):
   - `datos.json`: expedientes, etapas, recordatorios y configuración, **cifrados** con su contraseña.
-  - `anexos\`: copia de los documentos de cada expediente. Los documentos **no** van cifrados, para que Word, Excel o el lector de PDF puedan abrirlos.
+  - Los documentos anexos están en `Documentos\Expedix Anexos\<cliente>` y no van cifrados, para que Word, Excel o el lector de PDF puedan abrirlos. Si su carpeta Documentos se sincroniza con OneDrive, también se respaldan allí.
   - `papelera\`: documentos eliminados de los últimos 30 días.
   - `respaldos\`: copia automática diaria de los datos; se conservan los últimos 15 días.
 - **Copia automática diaria a una carpeta** (Configuración → Respaldo): cada día copia datos y documentos a la carpeta que elija. Esta copia y la de **Exportar respaldo** van **sin cifrar**, para poder restaurarlas en otro equipo: guárdelas en una carpeta privada.
@@ -269,5 +272,7 @@ Los programas instalados se actualizan desde el repositorio público **[OpTicXit
 
 > Si cambia la estructura de `datos.json`, suba `version` dentro de los datos y agregue una migración en `loadData()` (ver CLAUDE.md). Los usuarios conservan su información al actualizar, así que **nunca rompa datos existentes**.
 
-### Licencia
-MIT.
+### Derechos de autor y licencia
+Copyright © 2026 **Miguel Ángel Martínez Utria**. Todos los derechos reservados.
+
+Expedix es software propietario. Su uso se rige por la licencia del archivo [LICENSE.txt](LICENSE.txt), que también se muestra al instalar el programa. No se permite copiarlo, distribuirlo, modificarlo ni venderlo sin autorización escrita del titular.

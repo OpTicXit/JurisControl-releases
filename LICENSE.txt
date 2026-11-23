@@ -1,0 +1,29 @@
+﻿EXPEDIX — LICENCIA DE USO
+Copyright © 2026 Miguel Ángel Martínez Utria. Todos los derechos reservados.
+
+Expedix (antes JurisControl), incluidos su código fuente, su código ejecutable, su
+diseño, su logo, sus textos, sus sonidos y su documentación, es una obra protegida por
+el derecho de autor cuyo titular es Miguel Ángel Martínez Utria (Ley 23 de 1982,
+Decisión Andina 351 de 1993 y demás normas aplicables).
+
+1. Licencia de uso. Se concede al usuario una licencia personal, no exclusiva e
+   intransferible para instalar y usar Expedix en sus propios equipos, para la gestión
+   de su práctica profesional. El programa se licencia, no se vende.
+
+2. Restricciones. Salvo autorización previa y por escrito del titular, no está
+   permitido: copiar, distribuir, vender, alquilar, sublicenciar o publicar el programa;
+   modificarlo, traducirlo o crear obras derivadas; descompilarlo, desensamblarlo o
+   aplicarle ingeniería inversa; ni retirar o alterar los avisos de derecho de autor.
+
+3. Datos del usuario. La información que el usuario registra en Expedix (clientes,
+   expedientes, documentos) le pertenece y se guarda en su propio equipo. El titular no
+   tiene acceso a ella.
+
+4. Términos legales. Los términos y plazos que sugiere el programa son orientativos. El
+   usuario debe verificar siempre la norma aplicable y lo que disponga cada despacho.
+
+5. Garantía. El programa se entrega "tal como está". En la medida en que la ley lo
+   permita, el titular no responde por pérdidas derivadas de su uso, incluido el
+   vencimiento de términos.
+
+Contacto para licencias y autorizaciones: Miguel Ángel Martínez Utria.
